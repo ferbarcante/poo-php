@@ -1,6 +1,7 @@
 <?php
 
 class Pessoa{
+    const year = "2004";
     private $nome;
     private $idade;
     private $cpf;
@@ -16,6 +17,10 @@ class Pessoa{
         $this->cpf = $cpf;
         $this->rg = $rg;
         $this->email = $email;
+    }
+
+    public function exibirAno(){
+        echo self::year;
     }
 
     public function welcome(){
@@ -96,5 +101,6 @@ $rodrigo->setSalario(1000);
 $totalSalario = $rodrigo->calcularSalario();
 
 echo $totalSalario;
+$rodrigo->exibirAno();
 
 ?>
