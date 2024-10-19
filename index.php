@@ -27,15 +27,24 @@
 
         ];
 
+        function filterByAuthor($books, $author){
+            $filteredBooks = [];
+
+            foreach ($books as $book){
+                if($book['author'] === $author){
+                    $filteredBooks = $book;
+                }
+            }
+
+            return $filteredBooks;
+            
+        }
+
 
     ?>
 
     <ul>
-        <?php foreach ($books as $book) : ?>
-            <?php if($book['author']  == 'Fiodor Dostoievsky') : ?>
-                 <li><?= $book['name']; ?></li>
-            <?php endif; ?>
-        <?php endforeach; ?>
+        
     </ul>
 </body>
 </html>
